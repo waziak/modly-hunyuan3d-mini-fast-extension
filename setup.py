@@ -39,7 +39,7 @@ def setup(python_exe: str, ext_dir: Path, gpu_sm: int) -> None:
     # ------------------------------------------------------------------ #
     if gpu_sm >= 70:
         # Volta and newer — PyTorch 2.6 + CUDA 12.4
-        torch_pkgs  = ["torch==2.6.0", "torchvision==0.21.0"]
+        torch_pkgs  = ["torch", "torchvision"]
         print(f"[setup] GPU SM {gpu_sm} -> PyTorch 2.6 + CUDA 12.4")
     else:
         # Pascal (SM 6.x) — PyTorch 2.5 + CUDA 11.8 (last version with SM 6.1)

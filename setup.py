@@ -48,7 +48,7 @@ def setup(python_exe: str, ext_dir: Path, gpu_sm: int) -> None:
         print(f"[setup] GPU SM {gpu_sm} (legacy) -> PyTorch 2.5 + CUDA 11.8")
 
     print("[setup] Installing PyTorch …")
-    pip(venv, "install", *torch_pkgs, "--index-url", torch_index)
+    pip(venv, "install", *torch_pkgs)
 
     # ------------------------------------------------------------------ #
     # Core dependencies
